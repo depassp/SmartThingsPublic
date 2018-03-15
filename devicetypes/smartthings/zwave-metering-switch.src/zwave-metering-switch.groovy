@@ -12,7 +12,7 @@
  *
  */
 metadata {
-	definition(name: "Z-Wave Metering Switch", namespace: "smartthings", author: "SmartThings", ocfDeviceType: "oic.d.switch", runLocally: true, minHubCoreVersion: '000.017.0012', executeCommandsLocally: false) {
+	definition(name: "Z-Wave Metering Switch", namespace: "smartthings", author: "SmartThings", ocfDeviceType: "oic.d.switch", minHubCoreVersion: '000.017.0012', executeCommandsLocally: false) {
 		capability "Energy Meter"
 		capability "Actuator"
 		capability "Switch"
@@ -29,6 +29,10 @@ metadata {
 		fingerprint mfr: "0086", prod: "0003", model: "0012", deviceJoinName: "Aeotec Micro Smart Switch"
 		fingerprint mfr: "021F", prod: "0003", model: "0087", deviceJoinName: "Dome On/Off Plug-in Switch"
 		fingerprint mfr: "0086", prod: "0103", model: "0060", deviceJoinName: "Aeotec Smart Switch 6"
+		// https://www.monoprice.com/product?p_id=15654
+		// Raw Description on 2018-03-15:
+		// zw:L type:1001 mfr:0208 prod:0101 model:0005 ver:1.05 zwv:4.24 lib:03 cc:5E,25,32,27,2C,2B,70,85,59,72,86,7A,73,5A role:05 ff:8700 ui:8700
+		fingerprint mfr: "0208", prod: "0101", model: "0005", deviceJoinName: "Monoprice Wall Socket 15654"
 	}
 
 	// simulator metadata
